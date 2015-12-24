@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title></title>
+		
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../../css/app.css" />
+	</head>
+
+	<body>
+		<!--css-->
+		<style>
+		#brief {
+			color: red;
+			text-align:left;
+			height: 80px;
+			margin-top: 6px;
+			margin-bottom: 6px;
+			background-color: white;
+		}
+		#promise {
+			color: grey;
+			text-align:center;
+			height: 80px;
+			background-color: white;
+		}
+		/*#appraise {
+			color: red;
+			text-align:center;
+			height: 80px;
+			background-color: gray;
+		}*/
+		/*#seller {
+			color: red;
+			text-align:center;
+			height: 80px;
+			background-color: green;
+		}*/
+		.contact-seller {
+			float:left ;
+		}
+		.flex-container {
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-flex-flow: row wrap;
+				justify-content: space-between;
+				text-align: center;
+			}
+		.mui-control-content {
+				background-color: white;
+				min-height: 215px;
+			}
+		.mui-control-content .mui-loading {
+				margin-top: 50px;
+			}
+		</style>
+		
+		<!--轮播商品图片区-->
+		<div id="slider" class="mui-slider">
+			<div class="mui-slider-group mui-slider-loop">
+				<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#">
+						<img src="../../images/yuantiao.jpg">
+					</a>
+				</div>
+				<!-- 第一张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="../../images/shuijiao.jpg">
+					</a>
+				</div>
+				<!-- 第二张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="../../images/muwu.jpg">
+					</a>
+				</div>
+				<!-- 第三张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="../../images/cbd.jpg">
+					</a>
+				</div>
+				<!-- 第四张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="../../images/yuantiao.jpg">
+					</a>
+				</div>
+				<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#">
+						<img src="../../images/shuijiao.jpg">
+					</a>
+				</div>
+			</div>
+			<div class="mui-slider-indicator">
+				<div class="mui-indicator mui-active"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+			</div>
+		</div>
+		<!--商品简介-->
+		<div id="brief">
+		<div>
+			<div style="float: left;height: 60px;" >
+				<p>商品名</p>
+				<div style="float: right;height: 60px;">
+				<img src="../../images/iconfont-qian.png" width="20" height="20" align="absbottom">888.50</img>
+			</div>
+			</div>
+		 	<div style="float: right;text-align: center;">
+				<img src="../../images/iconfont-dianhua.png" width="25" height="25" align="center"></img>
+				<div style="clear: all;"></div>
+				<span style="font-size:small;color: gray;">电话咨询</span>
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+		<p>商品简介:这不是一只普通的猫，这是战斗猫</p>
+		
+		</div>
+
+		<!--商家承诺-->
+		<div id="promise">
+			<div>
+				商家承诺
+			</div>
+		
+			<div style="float: left;margin-top: 10px;width: 100%;">
+				<div style="float: left;text-align: center;width: 25%;">
+					<img src="../../images/iconfont-zhijian.png" width="25" height="25" align="center"></img>
+					<div style="clear: all;"></div>
+					<span style="font-size:small;color: gray;">人工质检</span>
+				</div>
+				<div style="float: left;text-align: center;width: 25%">
+					<img src="../../images/iconfont-tuihuo.png" width="25" height="25" align="center"></img>
+					<div style="clear: all;"></div>
+					<span style="font-size:small;color: gray;">无由退货</span>
+				</div>
+				<div style="float: left;text-align: center;width: 25%">
+					<img src="../../images/iconfont-baoyou.png" width="25" height="25" align="center"></img>
+					<div style="clear: all;"></div>
+					<span style="font-size:small;color: gray;">一件包邮</span>
+				</div>
+				<div style="float: left;text-align: center;width: 25%">
+					<img src="../../images/iconfont-xianxingpeifu.png" width="25" height="25" align="center"></img>
+					<div style="clear: all;"></div>
+					<span style="font-size:small;color: gray;">先行赔付</span>
+				</div>
+			</div>
+			
+		</div>
+
+		<!--选择商品-->
+		<div id="choose">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" style="color: gray;">
+			      选择商品
+			    		</a>
+				</li>
+			</ul>
+		</div>
+
+		<!--评价-->
+		<div id="appraise">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" style="color: gray;font-size: small;">
+					<span class="mui-badge mui-badge-inverted" style="color: red;">99.9%好评</span>
+			      	共87878人参与评价
+			   		</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="#">
+						<img class="mui-media-object mui-pull-right" src="../../images/shuijiao.jpg">
+						<div class="mui-media-body">
+							路人甲
+							<p class='mui-ellipsis'>这猫太特么好了这猫太特么好了这猫太特么好了</p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a style="color: gray;font-size: small;text-align: center;">
+			      	查看更多评价
+			   		</a>
+				</li>
+			</ul>
+		</div>
+
+		<!--商家介绍-->
+		<div id="seller">
+		<ul class="mui-table-view">
+			<li class="mui-table-view-cell mui-hidden">cared
+				<div id="M_Toggle" class="mui-switch mui-active">
+					<div class="mui-switch-handle"></div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<a href="#">
+					<img class="mui-media-object mui-pull-left" src="../../images/muwu.jpg">
+					<div class="mui-media-body">
+						特种猫专卖店
+						<div style="clear: all;font-size: xx-small;color: gray">
+							<img src="../../images/iconfont-iconrenzheng01.png" width="20" height="20" align="absbottom">
+							<img src="../../images/iconfont-tuihuanhuobaozheng.png" width="20" height="20" align="absbottom">已缴纳保证金</img>
+						</img>
+						</div>
+					</div>
+				</a>
+			</li>
+		</ul>
+		</div>
+
+		<!--商品详情，包括特性介绍，商品参数，成交记录-->
+		<dev id="details" class="mui-content">
+			<div id="slider" class="mui-slider">
+				<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<a class="mui-control-item" href="#item1mobile">
+				图文详情
+			</a>
+					<a class="mui-control-item" href="#item2mobile">
+				尺码/参数
+			</a>
+					<a class="mui-control-item" href="#item3mobile">
+				成交记录
+			</a>
+				</div>
+				<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
+				<div class="mui-slider-group">
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell">第1个选项卡子项-1</li>
+							<li class="mui-table-view-cell">第1个选项卡子项-2</li>
+							<li class="mui-table-view-cell">第1个选项卡子项-3</li>
+							<li class="mui-table-view-cell">第1个选项卡子项-4</li>
+							<li class="mui-table-view-cell">第1个选项卡子项-5</li>
+						</ul>
+						<!--<div id="scroll1" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<table border="1" style="margin: 6px; width:inherit;">
+									<tr>
+									  <th>品牌</th>
+									  <td>特种猫特种猫特种猫特种猫特种猫特种猫特种猫特种猫特种猫特种猫特种猫特种猫特种猫特种猫特种猫特种猫特种猫</td>
+									</tr>
+									<tr>
+									  <th>标题2</th>
+									  <td>555 77 854</td>
+									</tr>
+									<tr>
+									  <th>标题3</th>
+									  <td>555 77 855</td>
+									</tr>
+								</table>
+							</div>
+						</div>-->
+					</div>
+					<div id="item2mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll2" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<table border="1" style="margin: 6px; width:inherit;">
+									<tr>
+										<th>品牌</th>
+										<td>特种猫特种猫特种猫特种猫特种猫特种猫特种猫特种猫特种猫特种猫特种猫特种猫特种猫特种猫特种猫特种猫特种猫</td>
+									</tr>
+									<tr>
+										<th>标题2</th>
+										<td>555 77 854</td>
+									</tr>
+									<tr>
+										<th>标题3</th>
+										<td>555 77 855</td>
+									</tr>
+								</table>
+								<!--<div class="mui-loading">
+									<div class="mui-spinner">
+									</div>
+								</div>-->
+							</div>
+						</div>
+
+					</div>
+					<div id="item3mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll3" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+							<ul class="mui-table-view">
+								<li class="mui-table-view-cell">第3个选项卡子项-1</li>
+								<li class="mui-table-view-cell">第3个选项卡子项-2</li>
+								<li class="mui-table-view-cell">第3个选项卡子项-3</li>
+								<li class="mui-table-view-cell">第3个选项卡子项-4</li>
+								<li class="mui-table-view-cell">第3个选项卡子项-5</li>
+							</ul>
+								<!--<div class="mui-loading">
+									<div class="mui-spinner">
+									</div>
+								</div>-->
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</dev>
+		<script src="../../js/mui.min.js"></script>
+		<script>
+			mui.init({
+				swipeBack: true
+			});
+//			(function($) {
+//				$('.mui-scroll-wrapper').scroll({
+//					indicators: true //是否显示滚动条
+//				});
+//				var html2 = '<table border="1" style="margin: 6px; width:inherit;"><tr><th>品牌</th><td>特种猫特种猫特种猫特种猫特种猫特种猫特种猫特种猫特种猫特种猫特种猫特种猫特种猫特种猫特种猫特种猫特种猫</td></tr><tr><th>标题2</th><td>555 77 854</td></tr><tr><th>标题3</th><td>555 77 855</td></tr></table>';
+//				var html3 = '<ul class="mui-table-view"><li class="mui-table-view-cell">第三个选项卡子项-1</li><li class="mui-table-view-cell">第三个选项卡子项-2</li><li class="mui-table-view-cell">第三个选项卡子项-3</li><li class="mui-table-view-cell">第三个选项卡子项-4</li><li class="mui-table-view-cell">第三个选项卡子项-5</li></ul>';
+//				var item2 = document.getElementById('item2mobile');
+//				var item3 = document.getElementById('item3mobile');
+//				document.getElementById('slider').addEventListener('slide', function(e) {
+//					if (e.detail.slideNumber === 1) {
+//						item2.querySelector('.mui-scroll').innerHTML = html2;
+////						if (item2.querySelector('.mui-loading')) {
+////							setTimeout(function() {
+////								item2.querySelector('.mui-scroll').innerHTML = html2;
+////							}, 5);
+////						}
+//					} else if (e.detail.slideNumber === 2) {
+//						item3.querySelector('.mui-scroll').innerHTML = html3;
+////						if (item3.querySelector('.mui-loading')) {
+////							setTimeout(function() {
+////								item3.querySelector('.mui-scroll').innerHTML = html3;
+////							}, 5);
+////						}
+//					}
+//				});
+//				var sliderSegmentedControl = document.getElementById('sliderSegmentedControl');
+//				$('.mui-input-group').on('change', 'input', function() {
+//					if (this.checked) {
+//						sliderSegmentedControl.className = 'mui-slider-indicator mui-segmented-control mui-segmented-control-inverted mui-segmented-control-' + this.value;
+//						//force repaint
+//						sliderProgressBar.setAttribute('style', sliderProgressBar.getAttribute('style'));
+//					}
+//				});
+//			})(mui);
+		</script>
+	</body>
+
+</html>
