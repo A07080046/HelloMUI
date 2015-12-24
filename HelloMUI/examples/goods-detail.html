@@ -226,15 +226,15 @@
 		<dev id="details" class="mui-content">
 			<div id="slider" class="mui-slider">
 				<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
-					<a class="mui-control-item" href="#item1mobile">
-				图文详情
-			</a>
+					<a class="mui-control-item mui-active" href="#item1mobile">
+					图文详情
+					</a>
 					<a class="mui-control-item" href="#item2mobile">
-				尺码/参数
-			</a>
+					尺码/参数
+					</a>
 					<a class="mui-control-item" href="#item3mobile">
-				成交记录
-			</a>
+					成交记录
+					</a>
 				</div>
 				<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
 				<div class="mui-slider-group">
@@ -387,11 +387,37 @@
 				</div>
 			</div>
 		</dev>
+		<!--底部导航-->
+		<nav class="mui-bar mui-bar-tab">
+		  <a class="mui-tab-item" href="#">
+		    联系商家
+		  </a>
+		  <a class="mui-tab-item" href="#">
+		    立即购买
+		  </a>
+		</nav>
 		<script src="../js/mui.min.js"></script>
+		<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
 		<script>
 			mui.init({
 				swipeBack: true
 			});
+			$(function(){        
+		        //获取要定位元素距离浏览器顶部的距离
+		        var navH = $("#sliderSegmentedControl").offset().top;
+		        //滚动条事件
+		        $(window).scroll(function(){
+		                //获取滚动条的滑动距离
+		                var scroH = $(this).scrollTop();
+		                //滚动条的滑动距离大于等于定位元素距离浏览器顶部的距离，就固定，反之就不固定
+		                if(scroH>=navH){
+		                	 $("#sliderSegmentedControl").css({"position":"fixed","z-index": 100,"top":0,"left":0,"zoom":1,"background": "#F8FBFD"});
+		                }else if(scroH<navH){
+		                	$("#sliderSegmentedControl").css({"position":"static","margin":"0 auto"});
+		                }
+//		                console.log(scroH==navH);
+		        })
+})
 //			(function($) {
 //				$('.mui-scroll-wrapper').scroll({
 //					indicators: true //是否显示滚动条
