@@ -4,13 +4,45 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <title></title>
-    <script src="js/mui.min.js"></script>
-    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script src="../js/mui.min.js"></script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <!--App自定义的css-->
+	<link rel="stylesheet" type="text/css" href="../css/app.css" />
     <script type="text/javascript" charset="utf-8">
       	mui.init();
     </script>
 </head>
 <body>
-	
+	<style>
+		.choose-result {
+			height: 80px;
+			background-color: red;
+		}
+		.choose-para {
+			height: 80px;
+			background-color: yellow;
+		}
+		.choose-quantity {
+			height: 80px;
+			background-color: greenyellow;
+			vertical-align: middle;
+			text-align:center;
+		}
+	</style>
+	<!--选择结果总预览-->
+	<div class="choose-result">选择结果总预览</div>
+	<!--参数由服务器返回，不同商品参数数量和具体参数可能不同-->
+	<div class="choose-para">参数</div>
+	<!--购买数量-->
+	<div class="choose-quantity">
+		<span style="vertical-align: middle;">购买数量：</span>
+		<div class="mui-numbox" data-numbox-step='1' data-numbox-min='0'>
+			<button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
+			<input class="mui-input-numbox" type="number" />
+			<button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+		</div>
+	</div>
+	<!--确定购买-->
+	<button class="mui-btn mui-btn-block" style="background-color: red;">确认</button>
 </body>
 </html>

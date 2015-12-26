@@ -18,11 +18,11 @@
 		<!--css-->
 		<style>
 		#brief {
-			color: red;
+			/*color: red;*/
 			text-align:left;
 			height: 80px;
-			margin-top: 6px;
-			margin-bottom: 6px;
+			margin-top: 2px;
+			margin-bottom: 2px;
 			background-color: white;
 		}
 		#promise {
@@ -43,6 +43,13 @@
 			height: 80px;
 			background-color: green;
 		}*/
+		.xian {
+			height:19px;
+			width:200px;
+			background:#CCC；
+			margin-top:2px;
+			color: red;
+		}
 		.contact-seller {
 			float:left ;
 		}
@@ -62,7 +69,11 @@
 				margin-top: 50px;
 			}
 		</style>
-		
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<a class="mui-icon mui-pull-right"><img style="width: 26px;height: 24px;" src="../images/iconfont-gouwu.png"></a>
+			<h1 class="mui-title">产品名字</h1>
+		</header>
 		<!--轮播商品图片区-->
 		<div id="slider" class="mui-slider">
 			<div class="mui-slider-group mui-slider-loop">
@@ -112,26 +123,84 @@
 		</div>
 		<!--商品简介-->
 		<div id="brief">
-		<div>
-			<div style="float: left;height: 60px;" >
-				<p>商品名</p>
-				<div style="float: right;height: 60px;">
-				<img src="../images/iconfont-qian.png" width="20" height="20" align="absbottom">888.50</img>
-			</div>
-			</div>
-		 	<div style="float: right;text-align: center;">
-				<img src="../images/iconfont-dianhua.png" width="25" height="25" align="center"></img>
-				<div style="clear: all;"></div>
-				<span style="font-size:small;color: gray;">电话咨询</span>
-			</div>
-			<div style="clear: both;"></div>
-		</div>
-		<p>商品简介:这不是一只普通的猫，这是战斗猫</p>
+			<table style="vertical-align: middle; width:65%;float: left;text-align: left;border-color: gray;margin: 6px;">
+					<tr>
+						<th>
+							商品名
+						</th>
+						
+					</tr>
+					<tr>
+						<th>
+							商品简介:这不是一只普通的猫
+						</th>
+						
+					</tr>
+					<tr>
+						<th style="color: red;">
+							¥888.50
+						</th>
+						
+					</tr>
+				</table>
+
+		 		<table border="1" style="margin: 6px; width:25%;float: right;text-align: center;border-color: gray;">
+					<tr>
+						<th>
+							<img src="../images/iconfont-dianhua.png" width="15" height="15" align="center">咨询</img>
+						</th>
+						
+					</tr>
+					<tr>
+						<th>
+							<img src="../images/iconfont-fenxiang.png" width="15" height="15" align="center">分享</img>
+						</th>
+						
+					</tr>
+					<tr>
+						<th style="color: red;">
+							去店铺
+						</th>
+						
+					</tr>
+				</table>
 		
 		</div>
 
+		<div style="height: 40px;">
+			<div style="float: left;width: 60%;height: 40px;border:groove;line-height: 30px;">
+			<img src="../images/iconfont-xingxing.png" width="25" height="25" align="center" style="margin: auto;"></img>
+			<img src="../images/iconfont-xingxing.png" width="25" height="25" align="center" style="margin: auto;"></img>
+			<img src="../images/iconfont-xingxing.png" width="25" height="25" align="center" style="margin: auto;"></img>
+			</div>
+			<div style="float: left;width: 40%;height: 40px;border:groove;line-height: 30px;">
+			<img src="../images/iconfont-heart.png" width="25" height="25" align="center"></img>
+			<img src="../images/iconfont-heart.png" width="25" height="25" align="center"></img>
+			5629
+			</div>
+		
+		</div>
+		<!--<hr align=center width=300 color=#987cb9 size=1>-->
+			<div class="xian">ddd</div>
+		<div style="height: 30px;background-color: red;float: left;">
+			<!--<div class="xian"></div>-->
+			<!--<div>标题</div>-->
+			<!--<div class="xian"></div>-->
+			<hr align=center width=300 color=#987cb9 size=1>
+			<hr />
+		</div>
+		<div>
+			<ul class="mui-table-view">
+				<li class="mui-table-view"><img src="../images/shuijiao.jpg"></li>
+				<li class="mui-table-view"><img src="../images/shuijiao.jpg"></li>
+				<li class="mui-table-view"><img src="../images/shuijiao.jpg"></li>
+				<li class="mui-table-view"><img src="../images/shuijiao.jpg"></li>
+				<li class="mui-table-view"><img src="../images/shuijiao.jpg"></li>
+				<li class="mui-table-view"><img src="../images/shuijiao.jpg"></li>
+			</ul>
+		</div>
 		<!--商家承诺-->
-		<div id="promise">
+		<div id="promise" hidden="yes">
 			<div>
 				商家承诺
 			</div>
@@ -162,7 +231,7 @@
 		</div>
 
 		<!--选择商品-->
-		<div id="choose">
+		<div id="choose" hidden="yes">
 			<ul class="mui-table-view">
 				<li class="mui-table-view-cell">
 					<a class="mui-navigate-right" style="color: gray;">
@@ -173,7 +242,7 @@
 		</div>
 
 		<!--评价-->
-		<div id="appraise">
+		<div id="appraise" hidden="yes">
 			<ul class="mui-table-view">
 				<li class="mui-table-view-cell">
 					<a class="mui-navigate-right" style="color: gray;font-size: small;">
@@ -199,7 +268,7 @@
 		</div>
 
 		<!--商家介绍-->
-		<div id="seller">
+		<div id="seller" hidden="yes">
 		<ul class="mui-table-view">
 			<li class="mui-table-view-cell mui-hidden">cared
 				<div id="M_Toggle" class="mui-switch mui-active">
@@ -223,7 +292,7 @@
 		</div>
 
 		<!--商品详情，包括特性介绍，商品参数，成交记录-->
-		<dev id="details" class="mui-content">
+		<dev id="details" class="mui-content" hidden="yes">
 			<div id="slider" class="mui-slider">
 				<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
 					<a class="mui-control-item mui-active" href="#item1mobile">
@@ -238,7 +307,7 @@
 				</div>
 				<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
 				<div class="mui-slider-group">
-					<div id="item1mobile" class="mui-slider-item mui-control-content">
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
 						<ul class="mui-table-view">
 							<li class="mui-table-view"><img src="../images/shuijiao.jpg"></li>
 							<li class="mui-table-view"><img src="../images/shuijiao.jpg"></li>
@@ -297,7 +366,7 @@
 								</div>-->
 							</div>
 					</div>
-					<div id="item3mobile" class="mui-slider-item mui-control-content mui-active">
+					<div id="item3mobile" class="mui-slider-item mui-control-content">
 						<div id="scroll3">
 							<ul class="mui-table-view">
 								<li class="mui-table-view-cell">
@@ -389,12 +458,18 @@
 		</dev>
 		<!--底部导航-->
 		<nav class="mui-bar mui-bar-tab">
-		  <a class="mui-tab-item" href="#">
-		    联系商家
-		  </a>
-		  <a class="mui-tab-item" href="#">
+			<a class="mui-tab-item" href="#">
+		    收藏
+		  	</a>
+		  	<a class="mui-tab-item" href="#">
+		    喜爱
+		  	</a>
+		  	<a class="mui-tab-item" href="#">
+		    加入购物车
+		  	</a>
+		  	<a class="mui-tab-item" href="#">
 		    立即购买
-		  </a>
+		  	</a>
 		</nav>
 		<script src="../js/mui.min.js"></script>
 		<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
@@ -417,7 +492,7 @@
 		                }
 //		                console.log(scroH==navH);
 		        })
-})
+			})
 //			(function($) {
 //				$('.mui-scroll-wrapper').scroll({
 //					indicators: true //是否显示滚动条
