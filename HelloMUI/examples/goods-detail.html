@@ -457,16 +457,16 @@
 		</dev>
 		<!--底部导航-->
 		<nav class="mui-bar mui-bar-tab">
-			<a class="mui-tab-item" href="#">
+			<a class="mui-tab-item" href="http://www.runoob.com/html/html-tutorial.html">
 		    收藏
 		  	</a>
-		  	<a class="mui-tab-item" href="#">
+		  	<a class="mui-tab-item" href="#" onclick="gotoSubmitAppraisePage()">
 		    喜爱
 		  	</a>
-		  	<a class="mui-tab-item" href="#">
+		  	<a class="mui-tab-item" href="#" onclick="gotoShopingTrolleyPage()">
 		    加入购物车
 		  	</a>
-		  	<a class="mui-tab-item" href="#">
+		  	<a class="mui-tab-item" href="#" onclick="gotoChoosePage()">
 		    立即购买
 		  	</a>
 		</nav>
@@ -526,6 +526,18 @@
 //					}
 //				});
 //			})(mui);
+		function gotoShopingTrolleyPage()
+		{
+		window.location.href='goods-detail-shoping-trolley.html';
+		}
+		function gotoChoosePage()
+		{
+		window.location.href='goods-detail-choose.html';
+		}
+		function gotoSubmitAppraisePage()
+		{
+		window.location.href='goods-detail-submit-appraise.html';
+		}
 		</script>
 	</body>
 

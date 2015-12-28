@@ -1015,7 +1015,11 @@
 					"images/iconfont-qian.png",
 					"images/iconfont-zhijian.png",
 					"images/iconfont-xianxingpeifu.png",
-					"fonts/mui.ttf"
+					"fonts/mui.ttf",
+					"images/iconfont-gouwu.png",
+					"images/iconfont-fenxiang.png",
+					"images/iconfont-xingxing.png",
+					"images/iconfont-heart.png"
 				],
 				"refer": [],
 				"priority": 0
