@@ -72,12 +72,19 @@
 		.mui-control-content .mui-loading {
 				margin-top: 50px;
 			}
+		.img-info img {
+				width: 100%;
+				height: auto;
+				margin: 0;
+			}
+			
 		</style>
 		<header class="mui-bar mui-bar-nav">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 			<a class="mui-icon mui-pull-right" onclick="gotoChoosePage()"><img style="width: 26px;height: 24px;" src="../images/iconfont-gouwu.png"></a>
 			<h1 class="mui-title">产品名字</h1>
 		</header>
+		<div class="mui-content">
 		<!--轮播商品图片区-->
 		<div id="slider" class="mui-slider">
 			<div class="mui-slider-group mui-slider-loop">
@@ -188,15 +195,8 @@
 			<div class="xian"></div><div class="title">产品<img src="../images/iconfont-heart.png" width="25" height="25" align="center"></img>介绍</div><div class="xian"></div>
 		</div>
 
-		<div>
-			<ul class="mui-table-view">
-				<li class="mui-table-view"><img src="../images/shuijiao.jpg"></li>
-				<li class="mui-table-view"><img src="../images/shuijiao.jpg"></li>
-				<li class="mui-table-view"><img src="../images/shuijiao.jpg"></li>
-				<li class="mui-table-view"><img src="../images/shuijiao.jpg"></li>
-				<li class="mui-table-view"><img src="../images/shuijiao.jpg"></li>
-				<li class="mui-table-view"><img src="../images/shuijiao.jpg"></li>
-			</ul>
+		<div class="img-info">
+			<img src="../images/shuijiao.jpg"><img src="../images/cbd.jpg"><img src="../images/muwu.jpg"><img src="../images/yuantiao.jpg">
 		</div>
 		<!--商家承诺-->
 		<div id="promise" hidden="yes">
@@ -454,7 +454,8 @@
 					</div>
 				</div>
 			</div>
-		</dev>
+		</div>
+		</div>
 		<!--底部导航-->
 		<nav class="mui-bar mui-bar-tab">
 			<a class="mui-tab-item" href="http://www.runoob.com/html/html-tutorial.html">
